@@ -18,7 +18,7 @@ node {
                         sh "cat app/deployment.yaml"
                         //sh "sh artifact_version_update app/deployment.yaml"
                         sh "echo $GIT_COMMIT_REV"
-                        sh "sed -E -i'' "s/(.*nightwolf:).*/\1${GIT_COMMIT_REV}/" $1"
+                        sh "sed -E -i'' "s/(.*nightwolf:).*/\1${GIT_COMMIT_REV}/" app/deployment.yaml"
                         sh "cat app/deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'"
