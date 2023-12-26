@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: zein-app
+  name: devopsarea-app
   # You'll usually want to add your resources to the argocd namespace.
   namespace: argocd
 spec:
@@ -10,7 +10,7 @@ spec:
 
   # Source of the application manifests
   source:
-    repoURL: https://github.com/zeineldin/Argo-CD.git
+    repoURL: https://github.com/zeineldin/Java-testapp-CD.git
     targetRevision: HEAD
     path: app/
   destination:
